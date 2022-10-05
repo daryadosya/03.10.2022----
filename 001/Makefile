@@ -4,12 +4,12 @@
 #\date        03.10.2022
 #\coopyright  MIT
 ###
-PACKAGE=hello.osvoj.ru
-default: clear hello
-	   gcc -o hello.exe ./main.c ./hello.o
+PACKAGE=001.osvoj.ru
+default: clear 001
+	   gcc -o 001.exe ./main.c ./001.o
 
-hello:
-	gcc -c ./hello.c
+001:
+	gcc -c ./001.c
 
 clear:
 	   rm -rf ./*.exe ./*.o
