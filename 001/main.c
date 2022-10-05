@@ -6,9 +6,8 @@
 */
 
 /// подключаем стандартную библиотеку
-#include <stdio.h>
-#include "hello.h"
+#include "001.h"
 ///Объявляем функцию main
 int main (void) {
-    return hello();
+    return start();/**/
 }

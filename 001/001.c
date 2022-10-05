@@ -17,7 +17,7 @@ int start (void){
         Hello world!!!
     int a = 5;
     int b,c;
-    b = a * 3;
+    b = a * 3;   /**/
     c = b - a;
     printf("c = %d;", c);
     printf("a = %d\n", a);
@@ -36,7 +36,7 @@ void s002 (void){
     s001(d);
 }
 else{
-  printf ("\nДанные введены неверно, попробуйте заново.");
+  printf ("\nДанные введены неверно, попробуйте заново");
   s002();
   }
 }

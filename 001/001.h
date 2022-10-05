@@ -4,5 +4,5 @@
 \date        03.10.2022
 \coopyright  MIT
 */
-
+/**/
 int start (void);
