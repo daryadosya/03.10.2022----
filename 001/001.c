@@ -7,7 +7,10 @@
 
 /// подключаем стандартную библиотеку
 #include <stdio.h>
+#include "001.h"
+
 void s001 (int a);
+void s002 (void);
 
 int start (void){
     /// Выводим в стандартный вывод надпись \
@@ -19,13 +22,25 @@ int start (void){
     printf("c = %d;", c);
     printf("a = %d\n", a);
     printf("b = %d", b);
-    int d;
-    printf("\nВведите переменную d: ");
-    scanf ("%d", &d);
-    printf("\nd =%d", d);
-    s001(d);
+    s002();
     return 0;
+  }
+
+
+void s002 (void){
+  int d;
+  printf("\nВведите переменную d: ");
+  scanf ("%d", &d);
+  if (d>-10 && d<10) {
+    printf ("\nd = %d", d);
+    s001(d);
 }
+else{
+  printf ("\nДанные введены неверно, попробуйте заново.");
+  s002();
+  }
+}
+
 void s001 (int a){
   if(a>0){
     printf ("\nПеременная а: %d , больше 0.", a);
