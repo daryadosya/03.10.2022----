@@ -9,24 +9,23 @@
 #include <stdio.h>
 #include "005.h"
 
-int Task1(int S) ;
+void Task1(void) ;
 
 int start (void) {
-  float S;
-  printf("\nВведите общее число журавликов S: ");
-  scanf ("%f", &S);
-  Task1(S);
+  Task1();
   return 0;
 }
 
-int Task1(int S) {
-  int Nk, Np, Ns;
+void Task1(void) {
+  int Nk, Np, Ns, S;
+  printf("\nВведите общее число журавликов S: ");
+  scanf ("%d", &S);
 
   if ((S % 6)!=0) {
   printf("\nЧисло журавликов должны быть кратно 6! Повторите ввод.");
-  return Task1(S);
+  Task1();
   }
-
+  else {
   Nk = S*2/3;
   Np = S/6;
   Ns = Np;
@@ -34,3 +33,4 @@ int Task1(int S) {
       printf("\nЧисло журавликов у Пети Np = %d", Np);
       printf("\nЧисло журавликов у Сережи Ns = %d", Ns);
   }
+}
