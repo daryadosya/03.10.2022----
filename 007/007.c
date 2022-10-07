@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include "007.h"
 
-int factorial (int *a);
+void fact (unsigned int *i, unsigned long long *p);
 
 void start () {
   unsigned long long res = 0;
@@ -22,10 +22,11 @@ void start () {
 то есть *i - это я получаю значениче из адреса
 */
 void fact (unsigned int *i, unsigned long long *p){
-    if (*i>1){
-      if (*p==0)*p=(unsigned long long)*i;
-      *i =*i-1;
-      *p=*p * (unsigned long long)*i;
+    if (*i > 1){
+      if (*p == 0)
+          *p=(unsigned long long)*i;
+      *i = * i - 1;
+      *p= *p * (unsigned long long)*i;
       fact (i,p);
     }
     }
